@@ -1,0 +1,465 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+/*FOR ANIMATED BACKGROUND*/
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+/*FOR ANIMATED BACKGROUND*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/*FOR NAVBAR
+.header {  
+    padding: 19px 15px;
+    min-height: 70px;
+}
+.logo {  
+    height: auto;
+    max-width: 10%;
+}
+.nav {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10ch;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    list-style: none;
+    font-family: monospace;
+    font-size: 10fr;;
+    margin-top: -10ch;
+}
+.nav-menu, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color:black;
+}
+.nav-menu, a:hover {
+    color:blueviolet;
+}
+*/
+/*New navbar*/
+.dollar {
+    max-width: 100px;
+    height: auto;
+}
+.header {
+    
+   
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    font-family: monospace;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: rgba(155, 157, 158, 0.2);
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  .menu li a {
+      color: black;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  
+  
+
+/*END FOR ANIMATED BACKGROUND*/
+#page-container {
+    position: relative;
+    min-height: 100%;
+  }
+.blank {
+    height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    padding-top: 15%;
+    margin-bottom: -200px;
+    justify-content: center;
+}
+
+/*animation for tylercoin text*/
+.tylercoin {
+    
+    font-size: x-large;
+    font-family: monospace;
+    
+    
+}
+.introtext {
+    
+    height: 40vh;
+    /*This part is important for centering*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing {
+    width: 23ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  /*end animation for tylercoin text*/
+.buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    
+    
+}
+
+button {    
+    background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+    color: black;
+    padding: 14px 20px;
+    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 1px 1px black; 
+    animation: fadein 4s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+button:hover {
+    box-shadow: 0 0 20px 1px rgb(180, 177, 177); 
+}
+  
+
+.content {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+    font-family: monospace;
+    
+    box-shadow: 0 0 20px 1px black; 
+    
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    width: 50%;
+    text-align: center;
+}
+.left img {
+    max-height: 300px;
+}
+.right {
+    width: 50%;
+}
+/*keep this here to for responsiveness when you get to putting stuff in these divs*/
+@media (max-width: 767px) {
+    .content {
+      flex-direction: column;
+    }
+    .left,
+    .right {
+      width: auto;
+    }
+  }
+
+  .footer {
+      height: 100px;
+  }
+  /*the next blank div with rocket inside it and other stuff*/
+.holdmoon{
+    display: flex;
+    max-width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    align-items:center;
+
+}
+@media (max-width: 767px) {
+    .holdmoon {
+      flex-direction: column;
+    }
+    .moonrocket {
+        width: 50%;
+        margin: auto;
+    }
+    .moontext {
+        min-width: 70%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20vh;
+    }
+}
+
+.moonpng {
+    max-width: 300px;
+}
+   
+.moonrocket {
+    height: 90vh;
+    width: 70%;
+    display:flex;
+    
+	justify-content:center;
+	align-items:center;
+}
+.moontext {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+    font-family: monospace;
+    top: 50%;
+    
+}
+.moontext button {
+    max-width: 150px;
+}
+
+.rocket{
+	position:absolute;
+	width:500px;
+	height:500px;
+	animation-name: spin;
+	animation:spin 5s linear infinite;
+}
+@keyframes spin{ 
+	0% { -webkit-transform: rotate(0deg);transform:rotate(0deg);}
+	25% { -webkit-transform: rotate(90deg);transform:rotate(90deg);}
+	50% { -webkit-transform: rotate(180deg);transform:rotate(180deg);}
+	75% { -webkit-transform: rotate(270deg);transform:rotate(270deg);}
+	100% { -webkit-transform: rotate(360deg);transform:rotate(360deg);} 
+}
+@media screen and (max-width: 700px){
+	.rocket{
+		width:250px;
+		height:250px;
+	}
+	#moon{
+		width:40%;
+	}
+}
+
+/*The team*/
+.content2 {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+    font-family: monospace;
+    text-align: center;
+    box-shadow: 0 0 20px 1px black; 
+    border-radius: 25px;
+    
+    
+}
+.teamwrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 767px) {
+    .teamwrapper {
+        display: flex;
+    flex-direction: column;
+    }
+}
+
+.team {
+    width: 100%;
+   height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.team p {
+    text-align: left;
+    max-width: 70%;
+}
+.face {
+    max-width: 150px;
+    max-height: 200px;
+    border-radius: 60%;
+}
