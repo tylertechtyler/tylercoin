@@ -341,9 +341,7 @@ button:hover {
     }
   }
 
-  .footer {
-      height: 100px;
-  }
+ 
   /*the next blank div with rocket inside it and other stuff*/
 .holdmoon{
     display: flex;
@@ -462,4 +460,183 @@ button:hover {
     max-width: 150px;
     max-height: 200px;
     border-radius: 60%;
+}
+
+/*timeline*/
+
+
+
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+#conference-timeline .timeline-start,
+#conference-timeline .timeline-end {
+  display: table;
+  font-family:monospace;
+  font-size: 18px;
+  font-weight: 900;
+  
+  background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+  padding: 15px 23px;
+  color: #fff;
+  max-width: 15%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 1px black; 
+}
+.timeline-end {
+  top: -20px;
+}
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 3px;
+  
+  top: 0;
+  
+  left: 50%;
+  margin-left: -2px;
+  background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+  z-index: -1;
+}
+
+#conference-timeline .conference-timeline-content {
+  padding-top: 67px;
+  padding-bottom: 17px;
+}
+.timeline-article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.timeline-article .content-left-container,
+.timeline-article .content-right-container {
+  max-width: 44%;
+  width: 100%;
+  
+}
+.timeline-article {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  text-align: right;
+  
+  
+}
+.timeline-article .content-left,
+.timeline-article .content-right {
+  position: relative;
+  width: auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  
+  padding: 27px 25px;
+  
+  
+}
+.content-right, .content-left {
+  background: linear-gradient(45deg, rgb(170, 166, 241),rgb(243, 165, 243),rgb(171, 230, 241));
+  border-radius: 20px;
+  margin:  20px;
+  box-shadow: 0 0 20px 1px black; 
+}
+.timeline-article p {
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-family: sans-serif;
+  color: #242424;
+  
+  position: relative;
+}
+.timeline-article h3 {
+  font-family: monospace;
+  text-align: start;
+}
+.timeline-article p span.article-number {
+  position: absolute;
+  font-weight: 300;
+  font-size: 44px;
+  top: 10px;
+  left: -60px;
+  color: #00b0bd;
+}
+.timeline-article .content-left-container {
+  float: left;
+}
+.timeline-article .content-right-container {
+  float: right;
+}
+
+
+.timeline-article .center-circle {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: -15px;
+  color: #fff;
+  border-radius: 100%;
+  
+  box-shadow: 0 0 10px 1px black; 
+  
+}
+
+
+/*===== // Vertical Timeline =====*/
+/*credits to https://codepen.io/Ratko_Solaja/pen/ztxkw*/
+/*===== Resonsive Vertical Timeline =====*/
+@media only screen and (max-width: 930px) {
+  #conference-timeline .timeline-start,
+  #conference-timeline .timeline-end {
+    margin: 0;
+  }
+  #conference-timeline .conference-center-line {
+    margin-left: 0;
+    left: 35px;
+    
+  }
+  .timeline-article .center-circle {
+    margin-left: 0;
+    left: 20px;
+    display: none;
+  }
+  .timeline-article .content-left-container,
+  .timeline-article .content-right-container {
+    max-width: 100%;
+    width: auto;
+    float: none;
+    margin-left: 70px;
+    min-height: 53px;
+  }
+  .timeline-article .content-left-container {
+    margin-bottom: 20px;
+  }
+  .timeline-article .content-left,
+  .timeline-article .content-right {
+    padding: 10px 25px;
+    min-height: 65px;
+  }
+  
+ 
+}
+
+/*===== // Resonsive Vertical Timeline =====*/
+.footer {
+    height: 50vh;
+    width: 100%;
+    
+    display: flex;
+    padding-top: 15%;
+    margin-bottom: -200px;
+    justify-content: center;
 }
